@@ -71,7 +71,7 @@ ON X.userid=Y.userid
 AND X.course=Y.courseid
 where nxt_course_id>0
 and estatus=0
-and courseid is not null;;
+and courseid is not null;
 /*****************************
 Author: plariv@augurynet.commit
 Updated: 20200201
@@ -110,7 +110,7 @@ A.nxt_unixdline as nxt_deadline
 FROM 
   (SELECT * 
    FROM moodle.certcomplete_still_enrolled_2019
-   where nxt_course_cat=7) as A;;
+   where nxt_course_cat=7) as A;
 /*****************************
 Author: plariv@augurynet.commit
 Updated: 20200201
@@ -135,7 +135,7 @@ unix_timestamp(timestampadd(YEAR,1,from_unixtime(nxt_unixdline))) as nxt_deadlin
 FROM 
   (SELECT * 
    FROM moodle.certcomplete_still_enrolled_2019
-   where nxt_course_cat=8) as B;;
+   where nxt_course_cat=8) as B;
 /*****************************
 Author: plariv@augurynet.commit
 Updated: 20200201
@@ -165,7 +165,7 @@ on BB.enrolid=CC.id
 join mdl_course as DD
 on CC.courseid=DD.id
 where suspended=1
-order by lastname;;
+order by lastname;
 /*****************************
 Author: plariv@augurynet.commit
 Updated: 20200201
@@ -185,7 +185,7 @@ SELECT
 YY.userid,
 YY.idnumber
 FROM
-  (SELECT * FROM moodle.certcomplete_still_enrolled_2019) as YY;;
+  (SELECT * FROM moodle.certcomplete_still_enrolled_2019) as YY;
 /*****************************
 Author: plariv@augurynet.commit
 Updated: 20200201
