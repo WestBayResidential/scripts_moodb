@@ -1,11 +1,13 @@
 /*****************************
 Author: plariv@augurynet.commit
-Updated: 20200411
+Updated: 20200415
 Description:
   Create a view listing all courses details required for export to
   third party training data management systems. List is ordered by 
-  "time_from_hire" which is Moodle "course category" and corresponds 
-  with "to_be_taken_by_x_days_from_hire"
+  "category" which is Moodle "course category" and corresponds 
+  with "to_be_taken_by_x_days_from_hire". The CASE maps the 
+  category with a timeframe for completion of the course, starting
+  from either date of hire, or a period for recertifications.
 Dependencies:
   tables - mdl_course, mdl_course_cat
 ******************************/
